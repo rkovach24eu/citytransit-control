@@ -31,7 +31,7 @@ python3 src/app.py
 
 Відкрити http://127.0.0.1:18765/. Сервер доступний лише на цьому комп’ютері. Для зупинки - Ctrl+C. Якщо порт зайнятий, змінити його у `src/app.py`.
 
-Notebook: `notebooks/CityTransit_ETA.ipynb` (із виконаним виводом). Запускати з кореня проєкту або каталогу notebooks/. Код notebook самодостатній. Повторне виконання детерміновано відтворює дані та результати.
+Notebook: `notebooks/CityTransit_ETA.ipynb` (із виконаним виводом). Можна запускати з кореня проєкту, каталогу notebooks/ або окремо в Colab. При окремому запуску notebook створює каталог citytransit_demo/ з data/ і results/. Код самодостатній. Повторне виконання детерміновано відтворює дані та результати.
 
 `src/transit.py` створює train/calibration/test CSV, model.json, metrics.json, scenarios.json та checks.json. `src/app.py` показує інтерфейс, викликає модель і записує локальні події до results/audit.jsonl. Це навчальний журнал без production-гарантій незмінності.
 
