@@ -1,0 +1,12 @@
+{
+  "n": 200,
+  "mae_min": 0.497592318510684,
+  "rmse_min": 0.6124992922363198,
+  "within_2min": 1.0,
+  "interval_coverage": 0.945,
+  "baseline_mae_min": 2.6724966182461602,
+  "scenario_numeric_n": 10,
+  "scenario_within2_n": 9,
+  "policy_passed": 15,
+  "policy_total": 15
+}

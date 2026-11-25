@@ -1,0 +1,23 @@
+{
+  "version": "eta-ridge-v1",
+  "features": [
+    "bias",
+    "base_minutes",
+    "base_x_traffic",
+    "occupancy_ratio",
+    "rain",
+    "peak"
+  ],
+  "coefficients": [
+    1.0164642897161613,
+    0.8484661970284177,
+    0.08016957944666117,
+    0.8090456827850463,
+    0.7307502475225857,
+    0.8046498511202594
+  ],
+  "q90": 1.1549244649981727,
+  "train_n": 1200,
+  "calibration_n": 200,
+  "provenance": "Synthetic educational data; not calibrated for real traffic"
+}

@@ -1,0 +1,30 @@
+[
+  [
+    "split_ids_disjoint",
+    true
+  ],
+  [
+    "all_policy_cases",
+    true
+  ],
+  [
+    "missing_no_prediction",
+    true
+  ],
+  [
+    "nan_rejected",
+    true
+  ],
+  [
+    "age_60_valid",
+    true
+  ],
+  [
+    "age_61_rejected",
+    true
+  ],
+  [
+    "no_driver_command",
+    true
+  ]
+]

@@ -1,0 +1,437 @@
+[
+  {
+    "case": "normal",
+    "input": {
+      "route_id": "R-31",
+      "distance_remaining_km": 2,
+      "speed_kmh": 25,
+      "traffic_level": 3,
+      "occupancy_ratio": 0.6,
+      "weather": "dry",
+      "hour": 12,
+      "telemetry_age_sec": 10,
+      "case_id": "normal"
+    },
+    "actual_eta_min": 7.43,
+    "expected_status": "auto_information",
+    "output": {
+      "eta_min": 6.73,
+      "interval": [
+        5.57,
+        7.88
+      ],
+      "status": "auto_information",
+      "reason": "fresh_in_domain",
+      "fallback": null,
+      "model_version": "eta-ridge-v1"
+    },
+    "abs_error_min": 0.7,
+    "policy_ok": true,
+    "within_2min": true
+  },
+  {
+    "case": "light_traffic",
+    "input": {
+      "route_id": "R-31",
+      "distance_remaining_km": 2,
+      "speed_kmh": 40,
+      "traffic_level": 1,
+      "occupancy_ratio": 0.2,
+      "weather": "dry",
+      "hour": 12,
+      "telemetry_age_sec": 10,
+      "case_id": "light_traffic"
+    },
+    "actual_eta_min": 3.95,
+    "expected_status": "auto_information",
+    "output": {
+      "eta_min": 3.96,
+      "interval": [
+        2.81,
+        5.12
+      ],
+      "status": "auto_information",
+      "reason": "fresh_in_domain",
+      "fallback": null,
+      "model_version": "eta-ridge-v1"
+    },
+    "abs_error_min": 0.01,
+    "policy_ok": true,
+    "within_2min": true
+  },
+  {
+    "case": "rush_rain",
+    "input": {
+      "route_id": "R-31",
+      "distance_remaining_km": 2,
+      "speed_kmh": 25,
+      "traffic_level": 4,
+      "occupancy_ratio": 0.6,
+      "weather": "rain",
+      "hour": 8,
+      "telemetry_age_sec": 10,
+      "case_id": "rush_rain"
+    },
+    "actual_eta_min": 9.14,
+    "expected_status": "auto_information",
+    "output": {
+      "eta_min": 8.65,
+      "interval": [
+        7.49,
+        9.8
+      ],
+      "status": "auto_information",
+      "reason": "fresh_in_domain",
+      "fallback": null,
+      "model_version": "eta-ridge-v1"
+    },
+    "abs_error_min": 0.49,
+    "policy_ok": true,
+    "within_2min": true
+  },
+  {
+    "case": "congested",
+    "input": {
+      "route_id": "R-31",
+      "distance_remaining_km": 2,
+      "speed_kmh": 10,
+      "traffic_level": 5,
+      "occupancy_ratio": 0.6,
+      "weather": "dry",
+      "hour": 12,
+      "telemetry_age_sec": 10,
+      "case_id": "congested"
+    },
+    "actual_eta_min": 17.48,
+    "expected_status": "review",
+    "output": {
+      "eta_min": 16.49,
+      "interval": [
+        15.34,
+        17.65
+      ],
+      "status": "review",
+      "reason": "adverse_context",
+      "fallback": null,
+      "model_version": "eta-ridge-v1"
+    },
+    "abs_error_min": 0.99,
+    "policy_ok": true,
+    "within_2min": true
+  },
+  {
+    "case": "near_stop",
+    "input": {
+      "route_id": "R-31",
+      "distance_remaining_km": 0.3,
+      "speed_kmh": 18,
+      "traffic_level": 3,
+      "occupancy_ratio": 0.6,
+      "weather": "dry",
+      "hour": 12,
+      "telemetry_age_sec": 10,
+      "case_id": "near_stop"
+    },
+    "actual_eta_min": 2.57,
+    "expected_status": "auto_information",
+    "output": {
+      "eta_min": 2.59,
+      "interval": [
+        1.44,
+        3.75
+      ],
+      "status": "auto_information",
+      "reason": "fresh_in_domain",
+      "fallback": null,
+      "model_version": "eta-ridge-v1"
+    },
+    "abs_error_min": 0.02,
+    "policy_ok": true,
+    "within_2min": true
+  },
+  {
+    "case": "long_trip",
+    "input": {
+      "route_id": "R-31",
+      "distance_remaining_km": 5.5,
+      "speed_kmh": 35,
+      "traffic_level": 3,
+      "occupancy_ratio": 0.6,
+      "weather": "dry",
+      "hour": 12,
+      "telemetry_age_sec": 10,
+      "case_id": "long_trip"
+    },
+    "actual_eta_min": 11.76,
+    "expected_status": "auto_information",
+    "output": {
+      "eta_min": 11.77,
+      "interval": [
+        10.61,
+        12.92
+      ],
+      "status": "auto_information",
+      "reason": "fresh_in_domain",
+      "fallback": null,
+      "model_version": "eta-ridge-v1"
+    },
+    "abs_error_min": 0.01,
+    "policy_ok": true,
+    "within_2min": true
+  },
+  {
+    "case": "crowded",
+    "input": {
+      "route_id": "R-31",
+      "distance_remaining_km": 2,
+      "speed_kmh": 25,
+      "traffic_level": 3,
+      "occupancy_ratio": 0.98,
+      "weather": "dry",
+      "hour": 12,
+      "telemetry_age_sec": 10,
+      "case_id": "crowded"
+    },
+    "actual_eta_min": 7.72,
+    "expected_status": "review",
+    "output": {
+      "eta_min": 7.04,
+      "interval": [
+        5.88,
+        8.19
+      ],
+      "status": "review",
+      "reason": "adverse_context",
+      "fallback": null,
+      "model_version": "eta-ridge-v1"
+    },
+    "abs_error_min": 0.68,
+    "policy_ok": true,
+    "within_2min": true
+  },
+  {
+    "case": "night",
+    "input": {
+      "route_id": "R-31",
+      "distance_remaining_km": 2,
+      "speed_kmh": 25,
+      "traffic_level": 1,
+      "occupancy_ratio": 0.6,
+      "weather": "dry",
+      "hour": 2,
+      "telemetry_age_sec": 10,
+      "case_id": "night"
+    },
+    "actual_eta_min": 5.94,
+    "expected_status": "auto_information",
+    "output": {
+      "eta_min": 5.96,
+      "interval": [
+        4.8,
+        7.11
+      ],
+      "status": "auto_information",
+      "reason": "fresh_in_domain",
+      "fallback": null,
+      "model_version": "eta-ridge-v1"
+    },
+    "abs_error_min": 0.02,
+    "policy_ok": true,
+    "within_2min": true
+  },
+  {
+    "case": "rain",
+    "input": {
+      "route_id": "R-31",
+      "distance_remaining_km": 2,
+      "speed_kmh": 25,
+      "traffic_level": 3,
+      "occupancy_ratio": 0.6,
+      "weather": "rain",
+      "hour": 12,
+      "telemetry_age_sec": 10,
+      "case_id": "rain"
+    },
+    "actual_eta_min": 8.25,
+    "expected_status": "auto_information",
+    "output": {
+      "eta_min": 7.46,
+      "interval": [
+        6.3,
+        8.61
+      ],
+      "status": "auto_information",
+      "reason": "fresh_in_domain",
+      "fallback": null,
+      "model_version": "eta-ridge-v1"
+    },
+    "abs_error_min": 0.79,
+    "policy_ok": true,
+    "within_2min": true
+  },
+  {
+    "case": "road_closure",
+    "input": {
+      "route_id": "R-31",
+      "distance_remaining_km": 2,
+      "speed_kmh": 25,
+      "traffic_level": 3,
+      "occupancy_ratio": 0.6,
+      "weather": "dry",
+      "hour": 12,
+      "telemetry_age_sec": 10,
+      "case_id": "road_closure"
+    },
+    "actual_eta_min": 22.0,
+    "expected_status": "auto_information",
+    "output": {
+      "eta_min": 6.73,
+      "interval": [
+        5.57,
+        7.88
+      ],
+      "status": "auto_information",
+      "reason": "fresh_in_domain",
+      "fallback": null,
+      "model_version": "eta-ridge-v1"
+    },
+    "abs_error_min": 15.27,
+    "policy_ok": true,
+    "within_2min": false
+  },
+  {
+    "case": "snow",
+    "input": {
+      "route_id": "R-31",
+      "distance_remaining_km": 2,
+      "speed_kmh": 25,
+      "traffic_level": 3,
+      "occupancy_ratio": 0.6,
+      "weather": "snow",
+      "hour": 12,
+      "telemetry_age_sec": 10,
+      "case_id": "snow"
+    },
+    "actual_eta_min": 14.0,
+    "expected_status": "reject",
+    "output": {
+      "eta_min": null,
+      "interval": null,
+      "status": "reject",
+      "reason": "unknown_weather",
+      "fallback": "schedule_labelled",
+      "model_version": "eta-ridge-v1"
+    },
+    "abs_error_min": null,
+    "policy_ok": true,
+    "within_2min": null
+  },
+  {
+    "case": "stale",
+    "input": {
+      "route_id": "R-31",
+      "distance_remaining_km": 2,
+      "speed_kmh": 25,
+      "traffic_level": 3,
+      "occupancy_ratio": 0.6,
+      "weather": "dry",
+      "hour": 12,
+      "telemetry_age_sec": 180,
+      "case_id": "stale"
+    },
+    "actual_eta_min": 8.0,
+    "expected_status": "reject",
+    "output": {
+      "eta_min": null,
+      "interval": null,
+      "status": "reject",
+      "reason": "stale_telemetry",
+      "fallback": "schedule_labelled",
+      "model_version": "eta-ridge-v1"
+    },
+    "abs_error_min": null,
+    "policy_ok": true,
+    "within_2min": null
+  },
+  {
+    "case": "zero_speed",
+    "input": {
+      "route_id": "R-31",
+      "distance_remaining_km": 2,
+      "speed_kmh": 0,
+      "traffic_level": 3,
+      "occupancy_ratio": 0.6,
+      "weather": "dry",
+      "hour": 12,
+      "telemetry_age_sec": 10,
+      "case_id": "zero_speed"
+    },
+    "actual_eta_min": 18.0,
+    "expected_status": "reject",
+    "output": {
+      "eta_min": null,
+      "interval": null,
+      "status": "reject",
+      "reason": "out_of_domain_speed_kmh",
+      "fallback": "schedule_labelled",
+      "model_version": "eta-ridge-v1"
+    },
+    "abs_error_min": null,
+    "policy_ok": true,
+    "within_2min": null
+  },
+  {
+    "case": "missing",
+    "input": {
+      "route_id": "R-31",
+      "distance_remaining_km": null,
+      "speed_kmh": 25,
+      "traffic_level": 3,
+      "occupancy_ratio": 0.6,
+      "weather": "dry",
+      "hour": 12,
+      "telemetry_age_sec": 10,
+      "case_id": "missing"
+    },
+    "actual_eta_min": 8.0,
+    "expected_status": "reject",
+    "output": {
+      "eta_min": null,
+      "interval": null,
+      "status": "reject",
+      "reason": "missing_field",
+      "fallback": "schedule_labelled",
+      "model_version": "eta-ridge-v1"
+    },
+    "abs_error_min": null,
+    "policy_ok": true,
+    "within_2min": null
+  },
+  {
+    "case": "unavailable",
+    "input": {
+      "route_id": "R-31",
+      "distance_remaining_km": 2,
+      "speed_kmh": 25,
+      "traffic_level": 3,
+      "occupancy_ratio": 0.6,
+      "weather": "dry",
+      "hour": 12,
+      "telemetry_age_sec": 10,
+      "case_id": "unavailable"
+    },
+    "actual_eta_min": 8.0,
+    "expected_status": "reject",
+    "output": {
+      "eta_min": null,
+      "interval": null,
+      "status": "reject",
+      "reason": "model_unavailable",
+      "fallback": "schedule_labelled",
+      "model_version": "eta-ridge-v1"
+    },
+    "abs_error_min": null,
+    "policy_ok": true,
+    "within_2min": null
+  }
+]
